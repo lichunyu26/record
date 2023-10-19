@@ -8,7 +8,7 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     AConfigProvider: typeof import('ant-design-vue/es')['ConfigProvider']
-    HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
+    DownOutlined: typeof import('@ant-design/icons-vue')['DownOutlined']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }

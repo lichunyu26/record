@@ -5,7 +5,7 @@ import { loadEnv} from 'vite'
 import { createHtmlPlugin } from 'vite-plugin-html'
 import {projectTitle} from "../vite.config";
 
-
+console.log(projectTitle)
 const injectHtmlPlugin = createHtmlPlugin({
     minify: true,
     /**
@@ -18,7 +18,6 @@ const injectHtmlPlugin = createHtmlPlugin({
      */
     inject: {
         data: {
-            // 查找.env.test文件里面的VITE_PROJECT_TITLE，请以VITE_标识开头
             title: projectTitle,
             preInjectScript: `<script src="/preInjectScript.js"></script>`,
             afterInjectScript: `<script src="/afterInjectScript.js"></script>`,

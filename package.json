@@ -5,10 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc && vite build",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@ant-design/icons-vue": "^7.0.1",
     "@vitejs/plugin-vue-jsx": "^3.0.2",
     "ant-design-vue": "^4.0.3",
     "dayjs": "^1.11.10",
