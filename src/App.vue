@@ -7,7 +7,8 @@ import Login from "@/views/login/index.vue";
 dayjs.locale('zh-cn');
 
 //处理挂载位置
-function getPopupContainer(el, dialogContext) {
+// @ts-ignore
+function getPopupContainer(el:HTMLElement, dialogContext:any) {
     if (dialogContext) {
         return dialogContext.getDialogWrap();
     } else {

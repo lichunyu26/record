@@ -1,4 +1,9 @@
-import {createRouter, createWebHashHistory, RouteRecordRaw} from 'vue-router'
+import {
+    createRouter,
+    createWebHashHistory, NavigationGuardNext,
+    RouteLocationNormalized,
+    RouteRecordRaw
+} from 'vue-router'
 const whiteList: string[] = ["/","/login"]
 const routes: Array<RouteRecordRaw> = [
     {
@@ -15,8 +20,8 @@ const router = createRouter({
     history: createWebHashHistory(),
     routes
 })
-
-router.beforeEach(async (to, from, next) => {
+// @ts-ignore
+router.beforeEach(async (to:RouteLocationNormalized, from:RouteLocationNormalized, next:NavigationGuardNext) => {
 
     //如果是去白名单直接放行
     if (whiteList.indexOf(to.fullPath) > -1) return next()
